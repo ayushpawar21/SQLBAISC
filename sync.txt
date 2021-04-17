@@ -1,0 +1,4 @@
+Update A Set Condition = 'http://Sehyog.parle.biz/PRLLive/' from Configuration A  Where ModuleId ='DATATRANSFER31'
+Update A Set Condition = 'http://Sehyog.parle.biz/ParleIntegrationNew/POS2Console.asmx' from Configuration A where ModuleId ='DATATRANSFER44'
+Update A Set Condition = 'http://Sehyog.parle.biz/ParleIntegrationNew/Console2POS.asmx' from Configuration A  Where ModuleId ='DATATRANSFER45'
+

@@ -1,0 +1,3 @@
+Stock Nil Query:-  update ProductBatchLocation set prdbatlcnsih=0
+
+Stcok nil Unsalable:- update ProductBatchLocation set PrdBatLcnFre=0,PrdBatLcnUih=0

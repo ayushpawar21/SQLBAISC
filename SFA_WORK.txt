@@ -1,0 +1,44 @@
+
+select * from distributor
+
+select * from Salesman
+
+select * from hotfixlog order by 1 desc
+
+----sfa
+ 
+UPDATE Tbl_syncConfiguration SET Setting =1 Where ProcessName In('PDAExecuteAfterSync','PDASuccessMsgShow')
+ 
+UPDATE Tbl_SFAConfiguration SET CValue ='https://xdintegration.vxceed.net/IntegrationService.svc?wsdl' Where CName ='WebserviceURL'
+ 
+ delete from wsmasterexportuploadtrack
+
+-----------------*--------------------
+                 *  parleadmin       *
+parle software   *--------------------
+                 *  P@6le5uPP0rt     *  P@rl#A@m!n
+-----------------*--------------------
+-----------------*--------------------
+                 *  support16xm      *
+Xnapp monitoring *--------------------
+                 *  Support#123      *  Aayush#123
+-----------------*--------------------	
+
+truncate table setupdetails
+
+truncate table import_deploy_filenames
+
+truncate table deployexenames
+
+
+7302870570
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+Update setupdetails Set File_Path='C:\Program Files (x86)\Common Files\Crystal Decisions\2.0\Bin'  where File_Path like '%C:\%'

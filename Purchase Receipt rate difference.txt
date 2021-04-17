@@ -1,0 +1,8 @@
+--PARLECS/1020/041 // 06-10-2020 // Deepak Philip // To Allow saving of Purchase Receipt even if there is a rate difference
+IF EXISTS(SELECT * FROM configuration WHERE ModuleId='PURCHASERECEIPT10' AND Status=1)
+BEGIN 
+UPDATE A SET STATUS=0 FROM configuration A (NOLOCK)WHERE ModuleId='PURCHASERECEIPT10'
+END
+GO
+
+

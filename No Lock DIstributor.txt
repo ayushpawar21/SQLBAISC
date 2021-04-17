@@ -1,0 +1,18 @@
+IF NOT EXISTS(SELECT * FROM Distributor(NOLOCK))
+	BEGIN
+		insert into Distributor (
+		DistributorId,DistributorCode,DistributorName,DistributorAdd1,DistributorAdd2,DistributorAdd3,
+		PinCode , PhoneNo, ContactPerson, EmailID, TaxType, TINNo, DepositAmt, GeoMainId, CSTNo, LSTNo, LicNo,
+		DrugLicNo1 , Drug1ExpiryDate, DrugLicNo2, Drug2ExpiryDate, PestLicNo, PestExpiryDate, DayOff, Availability,
+		LastModBy , LastModDate, AuthId, AuthDate,PDADistributor,ActualDistributorCode)
+		SELECT 1,DistCde AS DistributorCode,DistNm AS DistributorName,
+		 DistAdd1 AS DistributorAdd1,DistAdd2 AS DistributorAdd2,
+		 DistAdd3 AS DistributorAdd3,DistAdd4 AS PinCode
+		,'''' AS PhoneNo,'''' AS ContactPerson,'''' AS EmailID,1 AS TaxType,'''' AS TINNo,
+		0 AS DepositAmt,0 AS GeoMainId,'''' AS CSTNo,'''' AS LSTNo,'''' AS LicNo,'''' AS DrugLicNo1
+		,CONVERT(VARCHAR(10),GETDATE(),121) AS Drug1ExpiryDate,'''' AS DrugLicNo2,CONVERT(VARCHAR(10),GETDATE(),121) AS Drug2ExpiryDate,'''',
+		CONVERT(VARCHAR(10),GETDATE(),121),0,1,1,CONVERT(VARCHAR(10),GETDATE(),121),1,
+		CONVERT(VARCHAR(10),GETDATE(),121),0,DistCde FROM REGINFO(NOLOCK)
+	   
+	END
+GO
