@@ -1,0 +1,31 @@
+DECLARE @FromDate	As DATETIME
+DECLARE @ToDate		As DATETIME
+SET @FromDate='2019-09-18'
+SET @ToDate='2019-12-02'
+UPDATE Salesinvoice SET Upload=0 WHERE SalInvDate BETWEEN @FromDate AND @Todate
+UPDATE ReturnHeader SET UpLoad=0 WHERE ReturnDate BETWEEN @FromDate AND @Todate
+UPDATE PurchaseReceipt SET UpLoad=0 WHERE GoodsRcvdDate BETWEEN @FromDate AND @Todate
+UPDATE Salesinvoice SET SchemeUpLoad=0 WHERE SalInvDate BETWEEN @FromDate AND @Todate
+UPDATE A SET A.Upload=0 FROM SalesInvoiceQPSSchemeAdj A INNER JOIN SalesInvoice B ON A.SalId=B.SalId AND B.SchemeUpLoad=0
+UPDATE ChequeDisbursalMaster SET SchemeUpLoad=0 WHERE ChqDisDate BETWEEN @FromDate AND @Todate
+UPDATE ReturnHeader SET SchemeUpLoad=0 WHERE ReturnDate BETWEEN @FromDate AND @Todate
+UPDATE FBMTrackIn SET Upload=0 WHERE FBMDate BETWEEN @FromDate AND @Todate
+UPDATE OrderBooking SET Upload=0 WHERE OrderDate BETWEEN @FromDate AND @Todate
+UPDATE A SET A.UploadFlag='N' FROM TranSactionWsSerailNo A INNER JOIN SalesInvoice B ON A.Salid=B.SalId AND B.SalInvDate BETWEEN @FromDate AND @Todate
+UPDATE Salesinvoice SET Upload=0 WHERE SalInvDate BETWEEN @FromDate AND @Todate
+UPDATE SampleISsueHd SET Upload=0 WHERE IssueDate BETWEEN @FromDate AND @Todate
+--UPDATE FreeIssueHd SET Upload=0 WHERE IssueDate BETWEEN @FromDate AND @Todate
+UPDATE SamplePurchaseReceipt SET Upload=0 WHERE GoodsRcvdDate BETWEEN @FromDate AND @Todate
+UPDATE SampleReturnHd SET Upload=0 WHERE ReturnDate BETWEEN @FromDate AND @Todate
+--MASTER 
+UPDATE Retailer SET Upload='N' WHERE LastModDate BETWEEN @FromDate AND @Todate
+UPDATE RetailerClassficationChange SET UpLoadFlag=0 WHERE LastModDate BETWEEN @FromDate AND @Todate
+UPDATE RouteMaster  SET Upload='N' WHERE LastModDate BETWEEN @FromDate AND @Todate
+UPDATE Salesman SET Upload='N' WHERE LastModDate BETWEEN @FromDate AND @Todate
+UPDATE RetailerMarket SET Upload=0 WHERE LastModDate BETWEEN @FromDate AND @Todate
+UPDATE RouteCovPlanMaster  SET Upload='N' WHERE LastModDate BETWEEN @FromDate AND @Todate
+UPDATE SalesInvoiceQpsDatebasedTrack SET Upload=0
+UPDATE UDCDetails SET Upload=0 WHERE MasterId IN (2,4) AND LastModDate BETWEEN @FromDate AND @Todate
+UPDATE ClusterAssign SET Upload=0 WHERE LastModDate BETWEEN @FromDate AND @Todate
+--ProductWiseStock
+UPDATE DayEndProcess SET NextUpDate = @FromDate,ProcDate = @FromDate WHERE ProcId = 11
