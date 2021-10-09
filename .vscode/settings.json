@@ -12,6 +12,19 @@
             "name": "DESKTOP-J3BRCQE\\SQLEXPRESS",
             "database": "PARLE1",
             "username": "sa"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "aayush",
+            "password": "P@rle$upp06t",
+            "username": "parleadmin",
+            "database": "parle1"
         }
     ]
 }
