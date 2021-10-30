@@ -1,0 +1,43 @@
+================================
+DSM TO Tally  =                *
+================================
+Create Voucher =               *
+================================
+GST Purchase                   *
+GST Sales                      *
+IDT                            *
+IDT in                         *
+Purchase Return                *
+Sales Return                   * 
+================================
+================================
+Create Legders                 *
+================================
+Sales Discounts                *
+================================
+Purchase Account GST 5.00%     *      
+Purchase Account GST 0.00%     *
+Purchase Account GST 28.00%    *
+Purchase Account GST 18.00%    *
+Purchase Account GST 12.00%    *
+================================
+Sales  Account GST 5.00%       *
+Sales Account GST 0.00%        *
+Sales  Account GST 28.00%      *
+Sales  Account GST 18.00%      *
+Sales  Account GST 12.00%      *
+================================================================================================================
+InputCGST 14.00%  also mandatory to set the Percentage as “6”                                                    *
+InputCGST 2.50%  also mandatory to set the Percentage as “2.5”							 *
+InputCGST 9.00%  also mandatory to set the Percentage as “2.5”					                 * 
+InputCGST 0.00%   also mandatory to set the Percentage as “0” only for zero rate set the Tax type as “Others”	 *
+================================================================================================================
+InputSGST 14.00%  also mandatory to set the Percentage as “6”							*
+InputSGST 2.50%  also mandatory to set the Percentage as “2.5”							*
+InputSGST 9.00%  also mandatory to set the Percentage as “2.5”							*
+InputSGST 0.00%   also mandatory to set the Percentage as “0” only for zero rate set the Tax type as “Others”	*	
+================================================================================================================
+================================================================================================================
+ConFigure Program Ini File 
+================================================================================================================
+
